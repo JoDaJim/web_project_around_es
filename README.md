@@ -2,31 +2,33 @@
 
 **Alrededor de los EE.UU.** comenzó como un proyecto estático al que tuve la oportunidad de darle vida y dinamismo mediante JavaScript.
 
-A lo largo de su desarrollo agregué interacción real con los diferentes elementos de la página, permitiendo editar la información del perfil de usuario, agregar y eliminar fotografías, dejar un "like" en las tarjetas y ampliar cada imagen para poder apreciarla con mayor detalle.
+Agregué interactividad a los diferentes elementos de la página, permitiendo editar la información del perfil de usuario, crear y eliminar tarjetas de imágenes e interactuar con ellas.
 
-Trabajar en este proyecto fue una excelente oportunidad para seguir desarrollando mis habilidades en JavaScript y comprender mejor cómo este lenguaje puede transformar una página estática en una experiencia interactiva.
+Este proyecto fue una excelente oportunidad para seguir desarrollando mis habilidades en JavaScript y comprender mejor cómo este lenguaje aporta interactividad a las páginas web.
 
 ## ¿Qué encontrarás aquí?
 
 Dentro de esta página encontrarás un perfil pensado para compartir imágenes de interés.
 
-También podrás editar la información del perfil, agregando tu nombre y una breve descripción sobre ti. Además, la página cuenta con una sección que permite agregar nuevas imágenes mediante un enlace y acompañarlas con su respectiva descripción.
+Podrás editar la información del perfil, agregando tu nombre y una breve descripción.
 
-Cada tarjeta incluye opciones para dar o quitar un "like", eliminar la imagen cuando ya no se desee mostrar y abrirla en una vista ampliada para apreciarla con mayor detalle.
+También encontrarás una sección que permite agregar nuevas imágenes mediante un enlace y acompañarlas con su respectiva descripción.
+
+Cada tarjeta ofrece la opción de dar o quitar un "like", eliminar la imagen y abrirla en una vista ampliada para apreciarla con mayor detalle.
 
 ## ¿Cómo fue construido?
 
-Este proyecto llegó a mis manos como una página completamente estática, construida únicamente con HTML y CSS.
+Este proyecto llegó a mis manos como una página construida únicamente con HTML y CSS.
 
-El primer paso fue identificar cada uno de sus elementos y familiarizarme con la estructura del DOM y las hojas de estilo existentes. Una vez comprendida la organización general del proyecto, comencé a seleccionar los elementos del DOM que necesitaban adquirir interactividad.
+Identifiqué sus elementos y me familiaricé con la estructura del DOM y las hojas de estilo existentes. Posteriormente, seleccioné los elementos que necesitaban adquirir interactividad.
 
-Durante el desarrollo trabajé principalmente con tres modales, cada uno con una función diferente: edición de perfil, creación de nuevas tarjetas para las imágenes y visualización ampliada de fotografías.
+Trabajé principalmente con tres modales: edición de perfil, creación de nuevas tarjetas de imágenes y visualización ampliada de fotografías.
 
-Con los elementos necesarios ya seleccionados, implementé funciones reutilizables para realizar acciones comunes, como abrir y cerrar los diferentes modales. También desarrollé la lógica necesaria para editar información del perfil, crear y eliminar tarjetas y manipular los datos ingresados mediante formularios.
+Implementé funciones reutilizables para realizar acciones comunes, como abrir y cerrar modales. A su vez, desarrollé la lógica necesaria para editar el perfil y gestionar las tarjetas.
 
-Posteriormente conecté los diferentes eventos de la página, utilizando eventos de `click` para los elementos interactivos y `submit` para los formularios, asociando cada uno con su comportamiento correspondiente.
+Conecté los eventos click y submit con sus respectivos comportamientos mediante JavaScript.
 
-Cada funcionalidad fue desarrollada y probada de manera progresiva. Después de implementar una nueva parte del proyecto, realizaba pruebas para comprobar su funcionamiento, corregir errores y asegurarme de que las funciones anteriores continuaran trabajando correctamente.
+Después de cada tarea, realizaba pruebas y revisiones para comprobar su funcionamiento antes de continuar con la siguiente.
 
 ## Tecnologías y técnicas utilizadas
 
@@ -49,27 +51,21 @@ Durante el desarrollo de este proyecto utilicé principalmente:
 
 ## Retos durante el desarrollo
 
-Este proyecto representó un reto importante para mí. El hecho de que estuviera dividido en tres etapas fue de gran ayuda, ya que me permitió concentrarme en secciones específicas y trabajar cada concepto de forma aislada sin sentir una sobrecarga de información.
+Este proyecto representó un reto importante para mí. Sin embargo, al estar dividido en tres etapas, pude abordar su desarrollo y comprensión de manera progresiva. Aun así, el nivel de complejidad fue considerable al tratarse de mi primera experiencia implementando interactividad mediante JavaScript.
 
-Aun así, el nivel de complejidad fue considerable al tratarse de mi primera experiencia agregando dinamismo real a una página web mediante JavaScript.
+Uno de mis principales retos fue comprender la diferencia entre utilizar document.querySelector() para realizar selecciones globales y element.querySelector() para trabajar dentro de elementos específicos. Esta diferencia fue cobrando sentido a lo largo del proceso.
 
-Entre las principales dificultades estuvo comprender mejor la diferencia entre utilizar `document.querySelector()` para realizar selecciones globales y `element.querySelector()` para trabajar dentro de elementos específicos. Al principio esta diferencia podía resultar confusa, pero poco a poco comenzó a tener más sentido al trabajar con modales y tarjetas independientes.
+Comprender la función getCardElement() resultó especialmente interesante, aunque también complejo al principio, sobre todo a medida que la función fue creciendo e incorporando nuevas responsabilidades relacionadas con cada tarjeta.
 
-Otro reto importante fue comprender la función `getCardElement()`. Su funcionamiento resultó especialmente interesante, pero también complejo en las primeras etapas, sobre todo a medida que la función fue creciendo e incorporando nuevas responsabilidades relacionadas con cada tarjeta.
-
-También aparecieron métodos y propiedades con los que todavía no estaba completamente familiarizado, como `.remove()`, `classList.toggle()` y `cloneNode(true)`. Comprender no solo qué hacían, sino también cómo interactuaban con los elementos del DOM, requirió práctica, pruebas y repetición.
-
-Cada una de estas dificultades terminó convirtiéndose en una oportunidad para reforzar mi comprensión de JavaScript y de la forma en que una interfaz puede responder dinámicamente a las acciones del usuario.
+Métodos como .remove(), classList.toggle() y cloneNode(true) me tomaron algo de tiempo antes de comprender su funcionamiento y comportamiento con los demás elementos del DOM.
 
 ## Aprendizajes
 
-Trabajar en este proyecto representó un salto importante en mi comprensión de JavaScript y, sobre todo, en la forma en que este lenguaje se conecta e interactúa con la estructura principal de una página web.
+Este proyecto representó un salto importante en mi comprensión de JavaScript y de cómo se relaciona con HTML y CSS para el desarrollo de páginas web.
 
-Después de estudiar JavaScript de manera más teórica, todavía no tenía completamente claro cuál era su papel dentro del desarrollo de una página ni cómo se relacionaba con los elementos construidos en HTML y estilizados con CSS.
+Desarrollar la interactividad del proyecto me permitió profundizar en esta relación y familiarizarme con conceptos como la selección, manipulación y actualización del DOM, así como con el uso de eventos, funciones y elementos dinámicos.
 
-El desarrollo de la interactividad de este proyecto me permitió comprender mejor esa relación y comenzar a familiarizarme con conceptos relacionados con la selección, manipulación y actualización del DOM, así como con el uso de eventos, funciones y elementos dinámicos.
-
-Todavía queda mucho por aprender y practicar, pero este proyecto me ayudó a construir una base mucho más sólida y a entender con mayor claridad cómo JavaScript puede transformar una página estática en una experiencia interactiva.
+Queda mucho por aprender y practicar. Sin embargo, este proyecto me ayudó a construir una base sólida y a entender con mayor claridad cómo JavaScript puede dar vida a una página web.
 
 ## GitHub Pages:
 
