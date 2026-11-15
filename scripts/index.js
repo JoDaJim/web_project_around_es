@@ -1,3 +1,5 @@
+import { setEventListeners } from "./validate.js";
+
 const initialCards = [
   {
     name: "Valle de Yosemite",
@@ -133,6 +135,7 @@ function handleCardFormSubmit(evt) {
   renderCard(newCardName, newCardLink, cardsList);
 
   closeModal(newCardModal);
+  newCardForm.reset();
 }
 
 initialCards.forEach(function (card) {
@@ -140,6 +143,7 @@ initialCards.forEach(function (card) {
 });
 
 profileAddButton.addEventListener("click", function () {
+  newCardForm.reset();
   openModal(newCardModal);
 });
 
@@ -155,6 +159,7 @@ profileEditCloseButton.addEventListener("click", function () {
 
 newCardCloseButton.addEventListener("click", function () {
   closeModal(newCardModal);
+  newCardForm.reset();
 });
 
 closeCardImagePopupButton.addEventListener("click", function () {
@@ -162,3 +167,5 @@ closeCardImagePopupButton.addEventListener("click", function () {
 });
 
 newCardForm.addEventListener("submit", handleCardFormSubmit);
+
+setEventListeners();
