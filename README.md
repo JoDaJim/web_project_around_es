@@ -32,22 +32,13 @@ Después de cada tarea, realizaba pruebas y revisiones para comprobar su funcion
 
 ## Tecnologías y técnicas utilizadas
 
-Durante el desarrollo de este proyecto utilicé principalmente:
-
-- **HTML:** para trabajar con la estructura existente de la página, incluyendo formularios, botones, modales y el `<template>` utilizado para las tarjetas.
-- **CSS:** para mantener la presentación visual del proyecto y trabajar con los diferentes estados de los elementos interactivos.
-- **JavaScript:** para agregar toda la lógica e interactividad de la página.
-- **Manipulación del DOM:** mediante métodos como `querySelector()` y propiedades como `textContent`, `value`, `src` y `alt`.
-- **Eventos:** utilizando `addEventListener()` para detectar acciones como `click` y `submit`.
-- **Funciones reutilizables:** para evitar duplicar lógica en acciones comunes, como abrir y cerrar modales.
-- **Arrays de objetos:** para almacenar la información inicial de las tarjetas dentro de `initialCards`.
-- **`forEach()`:** para recorrer los datos iniciales y renderizar cada tarjeta.
-- **`<template>` y `cloneNode(true)`:** para crear nuevas tarjetas dinámicamente a partir de una estructura reutilizable.
-- **Manipulación de clases:** utilizando `classList.add()`, `classList.remove()` y `classList.toggle()` para controlar estados visuales e interactivos.
-- **Formularios:** mediante el uso de `.value` para obtener datos ingresados por el usuario y `preventDefault()` para controlar su envío.
-- **Métodos del DOM:** como `prepend()` para insertar nuevas tarjetas y `remove()` para eliminar elementos de la página.
-- **Accesibilidad básica:** manteniendo atributos como `alt` y `aria-label` en los elementos correspondientes.
-- **DevTools y consola del navegador:** para realizar pruebas, detectar errores y comprobar el funcionamiento de cada nueva funcionalidad.
+- **HTML5:** estructura semántica, formularios, validación mediante atributos y uso de `<template>`.
+- **CSS3:** metodología BEM, diseño responsive, estados interactivos y estilos de validación.
+- **JavaScript (ES6+):** lógica de la aplicación, módulos (`import`/`export`), funciones reutilizables, arrays de objetos, métodos como `forEach()`, `some()` y `trim()`, y operadores ternarios.
+- **Manipulación del DOM:** `querySelector()`, `textContent`, `classList`, `cloneNode()`, `prepend()` y `remove()` para gestionar elementos dinámicos.
+- **Eventos e interactividad:** `addEventListener()`, `removeEventListener()`, `preventDefault()` y gestión de eventos de teclado, formularios y ventanas emergentes.
+- **Validación de formularios:** HTML5 Constraint Validation API, `ValidityState`, `validationMessage`, `setCustomValidity()` y control dinámico de botones.
+- **Accesibilidad y depuración:** atributos `alt` y `aria-label`, herramientas DevTools y consola del navegador.
 
 ## Retos durante el desarrollo
 

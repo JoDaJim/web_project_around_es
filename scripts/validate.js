@@ -13,6 +13,13 @@ function hideInputError(inputElement) {
 }
 
 function checkInputValidity(inputElement) {
+  if (inputElement.id === "card-title") {
+    const isOnlyWhitespace =
+      inputElement.value.length > 0 && inputElement.value.trim().length === 0;
+    inputElement.setCustomValidity(
+      isOnlyWhitespace ? "El titulo no puede contener solo espacios." : "",
+    );
+  }
   if (inputElement.validity.valid) {
     hideInputError(inputElement);
   } else {
@@ -45,4 +52,14 @@ export function setEventListeners() {
       });
     });
   });
+}
+
+export function resetValidation(formElement) {
+  const inputs = formElement.querySelectorAll(".popup__input");
+  const submitButton = formElement.querySelector(".popup__button");
+  inputs.forEach((inputElement) => {
+    inputElement.setCustomValidity("");
+    hideInputError(inputElement);
+  });
+  toggleButtonState(inputs, submitButton);
 }

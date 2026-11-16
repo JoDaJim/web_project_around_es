@@ -1,4 +1,4 @@
-import { setEventListeners } from "./validate.js";
+import { setEventListeners, resetValidation } from "./validate.js";
 
 const initialCards = [
   {
@@ -60,12 +60,23 @@ const closeCardImagePopupButton = cardImagePopup.querySelector(".popup__close");
 const cardImagePopupImage = cardImagePopup.querySelector(".popup__image");
 const cardImagePopupCaption = cardImagePopup.querySelector(".popup__caption");
 
+const popups = document.querySelectorAll(".popup");
+
 function openModal(modal) {
   modal.classList.add("popup_is-opened");
+  document.addEventListener("keydown", handleEscKey);
+  const formElement = modal.querySelector(".popup__form");
+  if (formElement) {
+    resetValidation(formElement);
+  }
 }
 
 function closeModal(modal) {
   modal.classList.remove("popup_is-opened");
+  document.removeEventListener("keydown", handleEscKey);
+  if (modal === newCardModal) {
+    newCardForm.reset();
+  }
 }
 
 function fillProfileForm() {
@@ -135,11 +146,29 @@ function handleCardFormSubmit(evt) {
   renderCard(newCardName, newCardLink, cardsList);
 
   closeModal(newCardModal);
-  newCardForm.reset();
+}
+
+function handleOverlayClick(event) {
+  if (event.target === event.currentTarget) {
+    closeModal(event.currentTarget);
+  }
+}
+
+function handleEscKey(event) {
+  if (event.key === "Escape") {
+    const openedModal = document.querySelector(".popup_is-opened");
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }
 }
 
 initialCards.forEach(function (card) {
   renderCard(card.name, card.link, cardsList);
+});
+
+popups.forEach((popupElement) => {
+  popupElement.addEventListener("click", handleOverlayClick);
 });
 
 profileAddButton.addEventListener("click", function () {
@@ -159,7 +188,6 @@ profileEditCloseButton.addEventListener("click", function () {
 
 newCardCloseButton.addEventListener("click", function () {
   closeModal(newCardModal);
-  newCardForm.reset();
 });
 
 closeCardImagePopupButton.addEventListener("click", function () {
